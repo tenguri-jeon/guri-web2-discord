@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+       margin: 0;
+       padding: 0;
+    }
+
+header{
+    border: 1px solid black;
+    width: 1000px;
+    box-sizing: border-box;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header > h1 {
+    background-color: yellow;
+    width: 200px;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+}
+
+nav{
+    float: right;
+    background-color: wheat;
+    overflow: hidden;
+    position: relative;
+}
+
+nav ul:nth-child(1) {
+    background-color: yellow;
+    float: right;
+    padding: 20px;
+    line-height: 30px;
+}
+
+nav ul:nth-child(2){
+    background-color: orange;
+    float: right;
+    padding: 20px;
+    margin-top: 40px;
+    line-height: 30px;
+    padding-left: 20px;
+}
+
+main{
+    width: 1000px
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+article{
+    width: 696px;
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+
+}
+
+article h2{
+    background-color: bisque;
+}
+aside{
+    border: 1px solid black;
+    float: right;
+    width: 300px;
+    box-sizing: border-box;
+}
+footer{
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>
+            web-LOGO
+        </h1>
+        <nav>
+            <ul>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+            </ul>
+            <ul>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+                <li>menu</li>
+            </ul>
+        </header>
+        </nav>
+        <main>
+            <article>
+                <h2>main article</h2>
+                <p>로렘임숨</p>
+                 </article>
+            <article><h2>main article</h2>
+                <p>로렘임숨</p>
+                </article>
+            <article><h2>main article</h2>
+                <p>로렘임숨</p>
+                </article>
+                <aside>
+                    <h2>right aside</h2>
+                    <p>대충 로렘임숨</p>
+                    <input type="mailto">
+                    <div>
+                        <h3>text</h3>
+                        <p>banner</p>
+                    </div>
+            </aside>
+        </main>
+        <footer></footer>
+    </header>
+</body>
+</html>
