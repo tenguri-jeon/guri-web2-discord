@@ -10,7 +10,7 @@
 
 a {
     text-decoration: none;
-    color: var(--color-blue);
+    /* color: var(--color-blue); */
 }
 
 .unit-link{
@@ -56,6 +56,19 @@ header{
     display: flex;
     align-items: center;
     justify-items: center;
+}
+
+@media (max-width:764px) {
+    .pc-view-header{
+         display: block;
+    }
+}
+
+@media (min-width:1024px) {
+    .mobile-view-header{
+        display: block;
+    }
+    
 }
 
 .pc-view-header>a {
@@ -123,6 +136,8 @@ input {
    padding-top: 64px;
 }
 
+
+
 .main-headline{
     font-size: 26px;
     color: var(--color-black1);
@@ -139,6 +154,7 @@ input {
     white-space: nowrap;
     padding-bottom: 64px;
     text-align: center;
+    line-height: 25px;
 }
 
 .main-explane{
@@ -150,6 +166,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 64px;
 }
 
 .main-selection-area {
@@ -161,6 +178,7 @@ input {
     margin: 10px 10px;
     
 }
+
 
 .selection-area-content{
     width: 240px;
@@ -192,13 +210,8 @@ input {
     justify-content: center;
     padding-bottom: 16px;
     text-align: center;
+    margin: 5px;
 }
-
-@media screen and (max-width:1024px) {
-    display: block;
-    
-}
-
 svg {
     width: 100%;
     height: 100%;
@@ -211,7 +224,7 @@ svg {
 
 .help {
     display: block;
-    width: 1000px;
+    width: 100%;
     height: 50px;
     text-align: center;
     font-size: 22px;
@@ -224,8 +237,7 @@ footer{
 }
 
 #footer-area{
-    background-color: var(--color-black1);
-    background-image: url(../img/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
+    background-color: #23272a;;
     background-size: cover; 
    background-position: center center;
 }
@@ -244,10 +256,62 @@ footer{
     border-radius: 20px;
     border: none;
     background-color: var(--color-green);
-    color: white;
     font-weight: bold;
     font-size: 20px;
 }
+
+.footer-contents {
+    background-image: url(../img/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
+    background-size: cover; 
+   background-position: center center;
+   width: 814px;
+   height: 145px;
+   margin: 0 auto;
+   display: flex;
+}
+
+.app-browser{
+    width: 175px;
+    position: absolute;
+}
+
+.app-apple{
+    width: 175px;
+}
+
+.app-android{
+    width: 170px;
+}
+
+.app-pc{
+    width: 175px;
+}
+
+.nav{
+    width: 690px;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.footer-discord-logo{
+    width: 130px;
+}
+
+.nav-pack {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 120px;
+}
+
+.nav-text{
+    padding: 10px;
+}
+
 
 
 
