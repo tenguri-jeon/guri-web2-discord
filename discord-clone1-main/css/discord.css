@@ -78,7 +78,6 @@ header{
    /* align items 와 justify-content의 차이점 */
    height: 300px;
     width: 100%;
-    margin-bottom: 64px;
 }
 
 .intro-text{
@@ -105,7 +104,9 @@ header{
 }
 
 .search-icon{
-
+  position: relative;
+  left: 15px;
+  width: 20px;
 }
 
 input {
@@ -119,6 +120,7 @@ input {
 }
 
 #main-container{
+   padding-top: 64px;
 }
 
 .main-headline{
@@ -126,7 +128,7 @@ input {
     color: var(--color-black1);
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 
 .main-explane{
@@ -135,7 +137,7 @@ input {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
     text-align: center;
 }
 
@@ -144,28 +146,27 @@ input {
     justify-items: center;
 }
 
-#selection-container{
-    width: 1000px;
+#selecition-container{
     display: flex;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main-selection-area {
     width: 260px;
     height: 280px;
-    /* background-color: #ccc; */
     box-sizing: border-box;
     border: 1px solid gray;
     border-radius: 10px;
-    /* box-shadow: 8.0px 16.0px 16.0px hsl(0deg, 0%, 0% / 0.25); */
-    display: inline-block;
     margin: 10px 10px;
+    
 }
 
 .selection-area-content{
     width: 240px;
     height: 260;
     box-sizing: border-box;
+    
 }
 
 .selection-area-name{
@@ -189,7 +190,7 @@ input {
     color:var(--color-black2);
     display: flex;
     justify-content: center;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
     text-align: center;
 }
 
@@ -207,3 +208,46 @@ svg {
     width: 120px;
     margin: 0 auto;
 }
+
+.help {
+    display: block;
+    width: 1000px;
+    height: 50px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--color-black1);
+    padding-top: 64px;
+}
+
+footer{
+   
+}
+
+#footer-area{
+    background-color: var(--color-black1);
+    background-image: url(../img/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
+    background-size: cover; 
+   background-position: center center;
+}
+
+.more{
+    text-align: center;
+    /* margin-top: 32px; */
+}
+
+
+.more-text{
+    width: 250px;
+    height: 42px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-green);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
