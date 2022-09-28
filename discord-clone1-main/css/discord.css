@@ -32,16 +32,13 @@ a {
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
-    min-width: 1000px;
     height: 71px;
-    padding: 0 5%;
+    padding: 16px 32px;
     box-sizing: border-box;
 }
 
 .header-container {
-   width: 1000px;
+    max-width: 1000px;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -55,7 +52,6 @@ header{
     color: var(--color-blue);
     display: flex;
     align-items: center;
-    justify-items: center;
 }
 
 .down-arrow ::after{
@@ -66,17 +62,8 @@ header{
     border-right: var(--color-black2);
 }
 
-@media (max-width:764px) {
-    .pc-view-header{
-         display: block;
-    }
-}
-
-@media (min-width:1024px) {
-    .mobile-view-header{
-        display: block;
-    }
-    
+.mobile-view-header {
+    display: none;
 }
 
 .pc-view-header>a {
@@ -99,6 +86,7 @@ header{
    /* align items 와 justify-content의 차이점 */
    height: 300px;
     width: 100%;
+    padding: 64px;
 }
 
 .intro-text{
@@ -114,14 +102,16 @@ header{
 
 .search{
  background-color: white;
- width: 610px;
+ width: 1000px;
+max-width: 640px;
  height: 40px;
  border-radius: 50px;
  border: 1px solid #666;
  justify-items: center;
  align-items: center;
- margin: 0 auto;
+ /* margin: 0 auto; */
  display: flex;
+ position: relative;
 }
 
 .search-icon{
@@ -132,12 +122,12 @@ header{
 
 input {
     outline: none;
-    display: flex;
-    width: 500px;
+    display: flex;;
     height: 38px;
     border: none;
     background-color: none;
-    margin: 0 auto;
+    margin: 15px;
+
 }
 
 #main-container{
@@ -252,20 +242,27 @@ footer{
 
 .more{
     text-align: center;
-    /* margin-top: 32px; */
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 
-.more-text{
+.more-view-box{
     width: 250px;
     height: 42px;
-    margin-top: 32px;
-    margin-bottom: 32px;
     border-radius: 20px;
     border: none;
     background-color: var(--color-green);
     font-weight: bold;
     font-size: 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.more-view-box>a {
+    color: white;
+    position: absolute;
+    top: 10px;
 }
 
 .footer-contents {
@@ -276,23 +273,47 @@ footer{
    height: 145px;
    margin: 0 auto;
    display: flex;
+   position: relative;
 }
 
 .app-browser{
-    width: 175px;
+    width: 180px;
+    opacity: 50%;
     position: absolute;
+    top: 50px;
+    left: 80px;
 }
 
 .app-apple{
-    width: 175px;
+    width: 50px;
+    opacity: 50%;
+    position: absolute;
+    top: 50px;
+    left: 468px
 }
 
 .app-android{
-    width: 170px;
+    width: 50px;
+    opacity: 50%;
+    position: absolute;
+    top: 50px;
+    left: 375px
 }
 
 .app-pc{
-    width: 175px;
+    width: 50px; 
+    position: absolute;
+    top: 40px;
+    left: 630px;
+    opacity: 50%;
+}
+
+.app-pc-x{
+    width: 50px;
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    opacity: 50%;
 }
 
 .nav{
@@ -316,10 +337,27 @@ footer{
     width: 120px;
 }
 
+.nav-pack>a{
+    color: #fff;
+}
+
 .nav-text{
     padding: 10px;
+}
+
+.navtext-package {
+    display: flex;
 }
 
 
 
 
+@media screen and (max-width:1024px){
+    .mobile-view-header{
+        display: block;
+    }
+
+    .pc-view-header{
+        display: none;
+    }
+}
