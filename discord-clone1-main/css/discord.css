@@ -58,6 +58,14 @@ header{
     justify-items: center;
 }
 
+.down-arrow ::after{
+    width: 10px;
+    height: 10px;
+    border: 2px solid;
+    border-top: var(--color-black2);
+    border-right: var(--color-black2);
+}
+
 @media (max-width:764px) {
     .pc-view-header{
          display: block;
