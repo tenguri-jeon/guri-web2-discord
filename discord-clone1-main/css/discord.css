@@ -31,36 +31,42 @@ a {
     width: 1px;
 }
 
-header{
-    height: 71px;
-    padding: 16px 32px;
-    box-sizing: border-box;
-}
-
 .header-container {
     max-width: 1000px;
     display: flex;
-    justify-items: center;
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
 }
 
+.pc-view-header>a{
+    color: var(--color-blue);
+}
+
+.pc-view-header>a:hover {
+    text-decoration: underline;
+}
+
+.mobile-view-header>a{
+    color: var(--color-blue);
+}
+
+.header-container-text a{
+    color: var(--color-blue);
+    padding: 10px;
+}
+
+.header-container-text a:hover{
+    text-decoration: underline;
+}
+
 .header-container-text{
     font-size: 14px;
-    padding: 10px 10px;
     color: var(--color-blue);
     display: flex;
     align-items: center;
 }
 
-.down-arrow ::after{
-    width: 10px;
-    height: 10px;
-    border: 2px solid;
-    border-top: var(--color-black2);
-    border-right: var(--color-black2);
-}
 
 .mobile-view-header {
     display: none;
@@ -70,21 +76,41 @@ header{
     padding: 10px;
 }
 
+.pc-view-header{
+    display: flex;
+}
+
 .mobile-view-header>a {
     padding: 10px;
     max-width: 400px;
 }
 
+.down-arrow{
+    display: flex;
+}
+
+.down-arrow::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border: 1px solid var(--color-black2);
+    display: block;
+    border-top: none;
+    border-left: none;
+    rotate: 45deg;
+    transform: translateY(5px);
+    transform: translateX(5px);
+}
 
 #intro{
-   background-image: url(../img/b7e9dce75f9edb23504e13b4699e208f204e5015.png) ;
-   background-size: cover; 
-   background-position: center center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   /* align items 와 justify-content의 차이점 */
-   height: 300px;
+    background-image: url(../img/b7e9dce75f9edb23504e13b4699e208f204e5015.png) ;
+    background-size: cover; 
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align items 와 justify-content의 차이점 */
+    height: 300px;
     width: 100%;
     padding: 64px;
 }
@@ -103,13 +129,11 @@ header{
 .search{
  background-color: white;
  width: 1000px;
-max-width: 640px;
+ max-width: 640px;
  height: 40px;
  border-radius: 50px;
  border: 1px solid #666;
- justify-items: center;
  align-items: center;
- /* margin: 0 auto; */
  display: flex;
  position: relative;
 }
@@ -148,8 +172,6 @@ input {
     font-size: 16px;
     color: var(--color-black2);
     align-items: center;
-    justify-content: center;
-    white-space: nowrap;
     padding-bottom: 64px;
     text-align: center;
     line-height: 25px;
@@ -171,10 +193,14 @@ input {
     width: 260px;
     height: 280px;
     box-sizing: border-box;
-    border: 1px solid gray;
+    box-shadow: 0 2px 50px #00000010;
     border-radius: 10px;
-    margin: 10px 10px;
-    
+    margin: 10px 10px;    
+}
+
+.main-selection-area:hover{
+    transform: translateY(-10px);
+
 }
 
 
@@ -259,6 +285,10 @@ footer{
     position: relative;
 }
 
+.more-view-box:hover{
+    box-shadow: 0 2px 8px #000500;
+}
+
 .more-view-box>a {
     color: white;
     position: absolute;
@@ -267,53 +297,86 @@ footer{
 
 .footer-contents {
     background-image: url(../img/c9f23a6ae41ebc0d9c21b08c2158c112fd5847b2.png);
-    background-size: cover; 
+    background-size: contain; 
+    /* contain 알아보자 */
    background-position: center center;
+   background-repeat:no-repeat;
    width: 814px;
-   height: 145px;
+   height: 156px;
    margin: 0 auto;
    display: flex;
    position: relative;
+   opacity: 50%;
+   
 }
 
 .app-browser{
     width: 180px;
-    opacity: 50%;
     position: absolute;
     top: 50px;
     left: 80px;
 }
 
+.app-browser:hover{
+    color: white;
+    opacity: 100%;
+    transition: 0.3s;
+}
+
 .app-apple{
-    width: 50px;
+    width: 40px;
     opacity: 50%;
     position: absolute;
-    top: 50px;
-    left: 468px
+    top: 60px;
+    left: 472px
+}
+
+.app-apple:hover{
+    color: white;
+    opacity: 100%;
+    transition: 0.3s;
 }
 
 .app-android{
-    width: 50px;
+    width: 40px;
     opacity: 50%;
     position: absolute;
-    top: 50px;
-    left: 375px
+    top: 60px;
+    left: 380px
+}
+
+.app-android:hover{
+    color: white;
+    opacity: 100%;
+    transition: 0.3s;
 }
 
 .app-pc{
     width: 50px; 
     position: absolute;
-    top: 40px;
-    left: 630px;
+    top: 60px;
+    left: 620px;
     opacity: 50%;
+}
+
+.app-pc:hover{
+    color: white;
+    opacity: 100%;
+    transition: 0.3s;
 }
 
 .app-pc-x{
     width: 50px;
     position: absolute;
-    right: 50px;
-    top: 40px;
+    right: 70px;
+    top: 60px;
     opacity: 50%;
+}
+
+.app-pc-x:hover{
+    color: white;
+    opacity: 100%;
+    transition: 0.3s;
 }
 
 .nav{
@@ -339,6 +402,12 @@ footer{
 
 .nav-pack>a{
     color: #fff;
+    opacity: 50%;
+}
+
+.nav-pack>a:hover {
+    color: white;
+    opacity: 100%;
 }
 
 .nav-text{
@@ -349,10 +418,21 @@ footer{
     display: flex;
 }
 
+.i-can-help-you {
+    width: 130px;
+    height: 45px;
+    background-color: var(--color-blue);
+    border-radius: 20px;
+    position: relative;
+}
 
+.footer-help {
+   position: absolute;
+   color: white;
+   
+}
 
-
-@media screen and (max-width:1024px){
+@media screen and (max-width:1000px){
     .mobile-view-header{
         display: block;
     }
